@@ -17,9 +17,9 @@
   <%= form.text_field :author, class:'form-control', placeholder: 'Autor' %><br>
   <%= form.select :status, [["En estante", :shelf], ["Prestado", :lent]], {selected: params[:status]}, class:'form-control', placeholder: 'Status' %><br>
   <%= form.label :checkout %>
-  <%= form.date_select :checkout, class:'form-control' %><br>
+  <%= form.date_field :checkout, class:'form-control' %><br>
   <%= form.label :checkin %>
-  <%= form.date_select :checkin, class:'form-control' %>
+  <%= form.date_field :checkin, class:'form-control' %>
 
   <br><br>
   <div class="text-center">
