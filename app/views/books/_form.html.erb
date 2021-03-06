@@ -1,0 +1,30 @@
+<div class="container">
+<%= form_with(model: book) do |form| %>
+  <% if book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+        <% book.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <%= form.text_field :title, class:'form-control', placeholder: 'Título' %><br>
+  <%= form.text_field :author, class:'form-control', placeholder: 'Autor' %><br>
+  <%= form.select :status, [["En estante", :shelf], ["Prestado", :lent]], {selected: params[:status]}, class:'form-control', placeholder: 'Status' %><br>
+  <%= form.label :checkout %>
+  <%= form.date_select :checkout, class:'form-control',placeholder: 'Checkout' %><br>
+  <%= form.label :checkin %>
+  <%= form.date_select :checkin, class:'form-control', placeholder: 'Checkin' %>
+
+  <br><br>
+  <div class="text-center">
+  <%= form.submit 'Crear libro', class: 'actions btn btn-success' %>
+  </div>
+  <br>
+<% end %>
+</div>
