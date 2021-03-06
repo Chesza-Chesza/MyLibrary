@@ -15,6 +15,7 @@
   
   <%= form.text_field :title, class:'form-control', placeholder: 'Título' %><br>
   <%= form.text_field :author, class:'form-control', placeholder: 'Autor' %><br>
+  <%= form.text_field :lended_to, class:'form-control', placeholder: 'Prestado a:' %><br>
   <%= form.select :status, [["En estante", :shelf], ["Prestado", :lent]], {selected: params[:status]}, class:'form-control', placeholder: 'Status' %><br>
   <%= form.label :checkout %>
   <%= form.date_field :checkout, class:'form-control' %><br>

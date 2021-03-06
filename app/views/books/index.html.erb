@@ -24,8 +24,9 @@
 <table class="table my-5">
   <thead>
     <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Author</th>
+      <th scope="col">Título</th>
+      <th scope="col">Autor</th>
+      <th scope="col">Prestado a</th>
       <th scope="col">Status</th>
       <th scope="col">Checkout</th>
       <th scope="col">Checkin</th>
@@ -38,6 +39,7 @@
       <tr>
         <td><%= book.title %></td>
         <td><%= book.author %></td>
+        <td><%= book.lended_to %></td>
         <td><%= book.status %></td>
         <td><%= book.checkout %></td>
         <td><%= book.checkin %></td>
